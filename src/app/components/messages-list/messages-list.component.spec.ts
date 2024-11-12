@@ -1,12 +1,6 @@
-import {
-  ComponentFixture,
-  fakeAsync,
-  TestBed,
-  tick,
-} from "@angular/core/testing";
+import { ComponentFixture, TestBed } from "@angular/core/testing";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MessagesListComponent } from "./messages-list.component";
-import { By } from "@angular/platform-browser";
 import { CommonModule } from "@angular/common";
 import { MatTableModule } from "@angular/material/table";
 import { HarnessLoader } from "@angular/cdk/testing";
@@ -16,7 +10,7 @@ import {
   MatTableHarness,
 } from "@angular/material/table/testing";
 
-describe("MessagesListComponent", () => {
+describe("Probando MessagesListComponent", () => {
   let component: MessagesListComponent;
   let fixture: ComponentFixture<MessagesListComponent>;
   let loader: HarnessLoader;
@@ -61,7 +55,7 @@ describe("MessagesListComponent", () => {
     expect(items.length).toBe(2);
   });
 
-  it("should render rows in the table according to the messages array 1", async () => {
+  it("Debe renderizar la misma cantidad de rows segun el array de mensajes enviado - Probando Harnesses de Angular Material", async () => {
     const messages = ["Hello World", "Hello Cats"];
     component.messages = messages;
     fixture.detectChanges();
@@ -70,7 +64,7 @@ describe("MessagesListComponent", () => {
     expect(rows.length).toBe(messages.length);
   });
 
-  it("should render rows in the table according to the messages array 2", async () => {
+  it("Debe renderizar la misma cantidad de rows segun el array de mensajes enviado - Probando Harnesses de Angular Material usando un selector", async () => {
     const messages = ["Hello World", "Hello Cats"];
     component.messages = messages;
     fixture.detectChanges();
