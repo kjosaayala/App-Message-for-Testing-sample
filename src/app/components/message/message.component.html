@@ -1,0 +1,9 @@
+<mat-form-field class="full-width">
+  <mat-label>Mensaje</mat-label>
+  <textarea matInput [ngModel]="_message()" (ngModelChange)="_message.set($event)"></textarea>
+</mat-form-field>
+<br />
+<div>
+  <button data-testid="send-message" mat-flat-button (click)="onSendMessage()">Enviar mensaje</button>
+  <button data-testid="cancel-message" mat-flat-button color="warning" (click)="onCancelMessage()">Cancelar</button>
+</div>

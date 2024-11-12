@@ -1,13 +1,14 @@
-.app-container {
-  display: grid;
-  grid-template-columns:  35% 65%;
-  column-gap: 10px;
-}
-
 .item {
   width: 100%; /* Asegura que cada item ocupe el 50% del contenedor */
 }
 
 .full-width {
   width: 100%; /* Hace que el componente ocupe el 100% del espacio en el item */
+}
+
+
+.no-data-row {
+  text-align: center;
+  font-style: italic;
+  color: gray;
 }
